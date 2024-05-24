@@ -5,12 +5,12 @@ This repository contains the source code for a backend server application that i
 ## Table of Contents
 
 - [Requirements](#requirements)
+- [File Structure](#file-structure)
 - [Getting Started](#getting-started)
-- [Project Structure](#project-structure)
 - [API Endpoints](#api-endpoints)
 - [Sample Code Snippets](#sample-code-snippets)
+- [Example Images](#example-image)
 - [Credit](#project-credit)
-- [License](#license)
 
 ## Requirements
 
@@ -81,6 +81,7 @@ To run this application locally, follow these steps:
 2. Install dependencies using `npm install`.
 3. Set up environment variables, including MongoDB connection string and JWT secret key.
 4. Start the server using `npm start` or `npm run dev`.
+5. Use [Postman](https://www.postman.com/) for testing the API.
 
 ## API Endpoints
 
@@ -89,8 +90,6 @@ To run this application locally, follow these steps:
 - **POST /api/auth/login**: Login using username and password.
 - **POST /api/auth/register**: Register using username and password.
 
-For detailed API documentation, refer to the API documentation provided in the `README` directory.
-
 ## Sample Code Snippets
 
 ### Machine Learning Model Integration
@@ -98,7 +97,7 @@ For detailed API documentation, refer to the API documentation provided in the `
 ```javascript
 const sentimentAnalysis = require("VaderSentimentAnalysis");
 
-app.post("/api/sentiment/analyze", (req, res) => {
+app.post("/api/sentiment/analyze-sentiment", (req, res) => {
   const { text } = req.body;
   const sentiment = sentimentAnalysis.analyze(text);
   res.json({ sentiment });
@@ -179,8 +178,4 @@ app.post("/api/auth/login", (req, res) => {
 
 ## Project credit
 
-- [Abhishek](https://github.com/thissudhir)
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+- [Abhishek](https://www.linkedin.com/in/thissudhir/)
