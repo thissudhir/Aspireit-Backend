@@ -2,6 +2,16 @@
 
 This repository contains the source code for a backend server application that integrates a pre-trained machine learning model for sentiment analysis with a secure file handling system. The application is built using Express.js and MongoDB.
 
+## Table of Contents
+
+- [Requirements](#requirements)
+- [Getting Started](#getting-started)
+- [Project Structure](#project-structure)
+- [API Endpoints](#api-endpoints)
+- [Sample Code Snippets](#sample-code-snippets)
+- [Contributors](#contributors)
+- [License](#license)
+
 ## Requirements
 
 ### 1. Machine Learning Model Integration
@@ -29,6 +39,7 @@ This repository contains the source code for a backend server application that i
 
 ## File Structure
 
+```
 project-root/
 │
 ├── config/
@@ -60,6 +71,7 @@ project-root/
 ├── index.js # Main application file
 ├── package.json # npm package configuration
 └── README.md # Project documentation
+```
 
 ## Getting Started
 
@@ -107,9 +119,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage });
 
-app.post("/api/files/upload", upload.single("file"), (req, res) => {
-  // File upload handling logic
-});
+app.post("/api/files/upload", upload.single("file"), (req, res) => {});
 ```
 
 ### Authentication System
@@ -118,7 +128,6 @@ app.post("/api/files/upload", upload.single("file"), (req, res) => {
 const jwt = require("jsonwebtoken");
 
 app.post("/api/auth/login", (req, res) => {
-  // Login logic to verify credentials
   const token = jwt.sign({ userId: user.id }, process.env.JWT_SECRET);
   res.json({ token });
 });
@@ -130,6 +139,7 @@ app.post("/api/auth/login", (req, res) => {
 ![Invalid credentials while login](image-1.png)
 ![Login successfull with token](image-2.png)
 ![User registered successfully](image-3.png)
+![Using VaderSentimentAnalysis ](image-4.png)
 
 ## Project credit
 
