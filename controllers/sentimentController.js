@@ -21,12 +21,32 @@
 // USES VENDER-SENTIMENTS MODLE FOR ANALYSIS
 
 const sentimentAnalysis = require("vader-sentiment");
+const Text = require("../models/Text");
+
 exports.analyzeSentiment = async (req, res) => {
   const { text } = req.body;
   if (!text) {
     return res.status(400).json({ error: "Text input is required" });
   }
-  const sentiment =
-    await sentimentAnalysis.SentimentIntensityAnalyzer.polarity_scores(text);
-  res.json({ sentiment });
+  try {
+    const sentiment =
+      sentimentAnalysis.SentimentIntensityAnalyzer.polarity_scores(text);
+
+    // Create a new Text document
+    const newText = new Text({
+      text: text,
+      sentiment: sentiment,
+    });
+
+    // Save the document to MongoDB
+    await newText.save();
+
+    res.status(201).json({
+      message: "Sentiment analyzed and saved successfully",
+      sentiment,
+    });
+  } catch (error) {
+    console.error("Error saving sentiment analysis:", error);
+    res.status(500).json({ error: "Failed to analyze and save sentiment" });
+  }
 };

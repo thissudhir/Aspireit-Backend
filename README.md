@@ -84,8 +84,10 @@ To run this application locally, follow these steps:
 
 ## API Endpoints
 
-- **POST /api/sentiment/analyze-sentiment**: Accepts text input and returns sentiment analysis results.
+- **POST /api/sentiment/analyze-sentiment**: Accepts text input and returns sentiment analysis results and store it ot mongoDb.
 - **POST /api/files/upload**: Accepts file uploads and securely stores them in MongoDB.
+- **POST /api/auth/login**: Login using username and password.
+- **POST /api/auth/register**: Register using username and password.
 
 For detailed API documentation, refer to the API documentation provided in the `README` directory.
 
@@ -141,19 +143,39 @@ app.post("/api/auth/login", (req, res) => {
 
 #### Invalid credentials while login
 
-![Invalid credentials while login](image-1.png)
+![Invalid credentials while login](./images/image-1.png)
 
 #### Login successfull with token
 
-![Login successfull with token](image-2.png)
+![Login successfull with token](./images/image-2.png)
 
 #### User registered successfully
 
-![User registered successfully](image-3.png)
+![User registered successfully](./images/image-3.png)
 
 #### Postman result of sentiment using VaderSentimentAnalysis
 
-![Using VaderSentimentAnalysis ](image-4.png)
+![Using VaderSentimentAnalysis ](./images/image-9.png)
+
+#### File uploaded successfully
+
+![File uploaded successfully ](./images/image-5.png)
+
+#### Uploaded file to MongoDB
+
+![Uploaded file to MongoDB](./images/image-6.png)
+
+#### Uploaded file size and information
+
+![Uploaded file size and information](./images/image-5.png)
+
+#### User Database Schema
+
+![User Database Schema](./images/image-7.png)
+
+#### Text Database Schema with sentiments analysis
+
+![Text Database Schema with sentiments analysis](./images/image-8.png)
 
 ## Project credit
 
