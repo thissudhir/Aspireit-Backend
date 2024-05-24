@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-
+//FILE SCHEMA
 const fileSchema = new Schema({
   filename: String,
   contentType: String,

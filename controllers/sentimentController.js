@@ -23,6 +23,7 @@
 const sentimentAnalysis = require("vader-sentiment");
 const Text = require("../models/Text");
 
+// SENTIMENT ANALYSIS FUNCTION
 exports.analyzeSentiment = async (req, res) => {
   const { text } = req.body;
   if (!text) {

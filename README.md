@@ -139,7 +139,7 @@ app.post("/api/auth/login", (req, res) => {
 
 #### Postman result of sentiment using tensorflow.js
 
-![Postman result of sentiment](image.png)
+![Postman result of sentiment](./images/image.png)
 
 #### Invalid credentials while login
 

@@ -1,5 +1,6 @@
 const multer = require("multer");
 
+//FILE UPLOAD FUNCTION
 const storage = multer.memoryStorage();
 const upload = multer({
   storage: storage,

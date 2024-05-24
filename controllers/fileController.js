@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const { GridFSBucket } = require("mongodb");
 
+// FILE FUPLOAD FUNCTION
 exports.uploadFile = (req, res) => {
   const file = req.file;
   if (!file) {
