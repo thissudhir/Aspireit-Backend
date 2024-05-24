@@ -9,7 +9,7 @@ This repository contains the source code for a backend server application that i
 - [Project Structure](#project-structure)
 - [API Endpoints](#api-endpoints)
 - [Sample Code Snippets](#sample-code-snippets)
-- [Contributors](#contributors)
+- [Credit](#project-credit)
 - [License](#license)
 
 ## Requirements
@@ -135,10 +135,24 @@ app.post("/api/auth/login", (req, res) => {
 
 ## Example Image
 
+#### Postman result of sentiment using tensorflow.js
+
 ![Postman result of sentiment](image.png)
+
+#### Invalid credentials while login
+
 ![Invalid credentials while login](image-1.png)
+
+#### Login successfull with token
+
 ![Login successfull with token](image-2.png)
+
+#### User registered successfully
+
 ![User registered successfully](image-3.png)
+
+#### Postman result of sentiment using VaderSentimentAnalysis
+
 ![Using VaderSentimentAnalysis ](image-4.png)
 
 ## Project credit
